@@ -2,6 +2,10 @@
 
 <?php
 
+    session_start();
+    if(isset($_SESSION['login'])){
+        header("Location:userhomepage.php");
+    }
     if(isset($_GET["errors"])){
 //        var_dump($_GET);
         $errors = json_decode($_GET["errors"], true);

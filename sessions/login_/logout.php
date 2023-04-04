@@ -13,8 +13,10 @@ echo " logout";
 session_start();
 $_SESSION= [];
 session_destroy();
-setcookie("PHPSESSID", '' , time()-3600, '','/');
+setcookie("PHPSESSID", '' , time()-3600, '/','');
+//setcookie( "age", "", time()- 60, "/osassuit43/day04/cookie/","", 0);
 
 
 var_dump($_SESSION);
 
+header("Location:login.php");
